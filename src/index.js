@@ -1,17 +1,50 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+// const Greeting = () => {
+//   return React.createElement(
+//     "div",
+//     {},
+//     React.createElement("h1", {}, "Hello again")
+//   );
+// };
+
+// This is the component that we actually want to render.
+
+const Booklist = () => {
+  return (
+    <section>
+      <Book />
+      <Book />
+    </section>
+  );
+};
+
+// This Book component is going to be rendered inside the Booklist component.
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
+};
+
+const Image = () => (
+  <img
+    src="https://m.media-amazon.com/images/I/51tMXGkRQ+L._SX258_BO1,204,203,200_.jpg"
+    alt="This image is not available"
+  />
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const Title = () => {
+  return <h1>Why a Daughter Needs a Dad.</h1>;
+};
+
+const Author = () => <h4>Gregory E. Lang</h4>;
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// root.render(<Greeting />);
+root.render(<Booklist />);

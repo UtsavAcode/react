@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
+import "./css/index.css";
 // const Greeting = () => {
 //   return React.createElement(
 //     "div",
@@ -13,7 +13,12 @@ import ReactDOM from "react-dom/client";
 
 const Booklist = () => {
   return (
-    <section>
+    <section className="booklist">
+      <h1>Rekha Bhandari is baklol😛😛.</h1>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
       <Book />
       <Book />
     </section>
@@ -23,7 +28,7 @@ const Booklist = () => {
 // This Book component is going to be rendered inside the Booklist component.
 const Book = () => {
   return (
-    <article>
+    <article className="book">
       <Image />
       <Title />
       <Author />

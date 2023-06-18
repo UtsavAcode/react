@@ -14,7 +14,6 @@ import "./css/index.css";
 const Booklist = () => {
   return (
     <section className="booklist">
-      <h1>Rekha Bhandari is baklol😛😛.</h1>
       <Book />
       <Book />
       <Book />
@@ -37,10 +36,7 @@ const Book = () => {
 };
 
 const Image = () => (
-  <img
-    src="https://m.media-amazon.com/images/I/51tMXGkRQ+L._SX258_BO1,204,203,200_.jpg"
-    alt="This image is not available"
-  />
+  <img src="./images/one.jpg" alt="This image is not available" />
 );
 
 const Title = () => {

@@ -14,36 +14,63 @@ import "./css/index.css";
 const Booklist = () => {
   return (
     <section className="booklist">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book
+        author={firstBook.author}
+        title={firstBook.title}
+        img={firstBook.img}
+      />
+
+      <Book
+        author={secondBook.author}
+        title={secondBook.tile}
+        img={secondBook.img}
+      />
+
+      <Book
+        author={thirdBook.author}
+        title={thirdBook.title}
+        img={thirdBook.img}
+      />
     </section>
   );
 };
 
 // This Book component is going to be rendered inside the Booklist component.
-const Book = () => {
+
+// store all the details of the books here.
+
+//Details of the first book.
+const firstBook = {
+  author: "J.K. rowling",
+  title: "Harry Potter and The Sorcerr's Stone",
+  img: "https://m.media-amazon.com/images/I/51HSkTKlauL._SX346_BO1,204,203,200_.jpg",
+};
+
+//Details of the second book.
+
+const secondBook = {
+  author: "Eichiro Oda",
+  title: "One Piece",
+  img: "./images/three.jpg",
+};
+
+//Details of the third book.
+
+const thirdBook = {
+  author: "Gege Akutami",
+  title: "Jujutsu Kaisen",
+  img: "./images/two.jpg",
+};
+
+const Book = (props) => {
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img src={props.img} alt={props.title} />
+      <h2>{props.title}</h2>
+      <h4>{props.author}</h4>
     </article>
   );
 };
-
-const Image = () => (
-  <img src="./images/one.jpg" alt="This image is not available" />
-);
-
-const Title = () => {
-  return <h1>Why a Daughter Needs a Dad.</h1>;
-};
-
-const Author = () => <h4>Gregory E. Lang</h4>;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

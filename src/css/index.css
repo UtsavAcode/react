@@ -9,13 +9,12 @@ body {
 }
 
 .booklist {
-  width: 50vw;
+  width: 90vw;
   max-width: 1170rem;
-  margin: 7rem auto;
+  margin: 5rem auto;
   border-radius: 3rem;
   display: grid;
-  /* gap: 2rem; */
-  background: #4e4646;
+  gap: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -75,8 +74,6 @@ body {
   color: black;
 }
 
-.subjects {
-  width: 50vw;
-  display: grid;
-  margin: 7rem auto;
+.txt1 {
+  margin: "1rem 0";
 }
